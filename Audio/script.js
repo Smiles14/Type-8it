@@ -13,7 +13,7 @@ document.onkeydown = function(e){
 
 function afPlay(y, x){
     if(x == 8 || x == 46) {
-        const file = new Audio('./sounds/dlete.wav')
+        const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/dlete.wav')
         file.play();
     } else {
         if (keys.includes(y.toLowerCase())){
@@ -21,7 +21,7 @@ function afPlay(y, x){
         }else{
             snd = keys[Math.floor(Math.random() * keys.length)];
         }
-        const file = new Audio('./sounds/'+ snd + '.wav')
+        const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/'+ snd + '.wav')
         file.play();
     }
 }
