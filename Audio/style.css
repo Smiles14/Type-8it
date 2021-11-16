@@ -1,0 +1,51 @@
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(38deg, rgba(2,0,36,1) 0%, rgba(68,65,63,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Passion One', sans-serif;
+}
+
+#center{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgb(255,177,177);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s;
+    text-align: center;
+    box-shadow: 10px 10px 10px black;
+    z-index: 1;
+}
+#center:hover{
+    animation: note 0.5s forwards;
+}
+
+p{
+    font-weight: bolder;
+    font-size: 240px;
+    margin: auto;
+    text-shadow: 10px 10px 15px rgb(44, 42, 53);
+    user-select: none;
+    padding: 3px;
+}
+
+@keyframes note {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+#txt{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow-wrap: break-word;
+}
+
+#boring{
+    font-size: 50px;
+}
