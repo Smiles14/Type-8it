@@ -3,3 +3,5 @@ Type 8it (Typebit) is a fun project created in a few hours in an attempt to brin
 All the sounds were made using Bfxr (if you don't know what it is, I highly recommend checking it out^^).  
 Hope you enjoy!
 -smiles
+
+Access at [Type8it](https://smiles14.github.io/Type-8it)
