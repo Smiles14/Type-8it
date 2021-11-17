@@ -32,7 +32,6 @@ p{
     margin: auto;
     text-shadow: 10px 10px 15px rgb(44, 42, 53);
     user-select: none;
-    padding: 3px;
 }
 
 @keyframes note {
