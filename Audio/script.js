@@ -14,7 +14,7 @@ document.onkeypress = function(e){
 document.onkeydown = function(e){
     var x = e.which || e.keyCode;
     if(x == 8 || x == 46){
-        afplayDlete(x);
+        afplayDlete();
         anim();
         bText(x);
     } 
@@ -30,7 +30,7 @@ function afPlay(y, x){
         file.play();
 }
 
-function afplayDlete(x){
+function afplayDlete(){
         const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/dlete.wav')
         file.play();
 }
