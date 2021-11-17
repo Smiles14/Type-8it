@@ -13,7 +13,11 @@ document.onkeypress = function(e){
         anim();
         bText(x);
 
-    }else{
+    }else if (x == 13){
+        bgText = "~: ";
+        document.getElementById('boring').innerHTML = bgText;
+    }
+    else{
         afPlay(y, x);
         anim();
         txtChange(y)
