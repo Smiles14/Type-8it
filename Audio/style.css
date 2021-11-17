@@ -20,6 +20,7 @@ body{
     text-align: center;
     box-shadow: 10px 10px 30px rgb(26, 26, 31);
     z-index: 1;
+    box-shadow: inset 0 0 2px #000000;
 }
 #center:hover{
     animation: note 0.5s forwards;
