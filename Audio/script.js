@@ -1,6 +1,8 @@
 let keys = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 let circle = document.getElementById('center')
 let bgText = "~: "
+let end = '.wav'
+let change = true;
 
 document.onkeypress = function(e){
     var x = e.which || e.keyCode;
@@ -9,6 +11,7 @@ document.onkeypress = function(e){
     anim();
     txtChange(y)
     bText(x)
+    checker(y);
 }
 
 document.onkeydown = function(e){
@@ -26,12 +29,12 @@ function afPlay(y, x){
         }else{
             snd = keys[Math.floor(Math.random() * keys.length)];
         }
-        const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/'+ snd + '.wav')
+        const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/'+ snd + end)
         file.play();
 }
 
 function afplayDlete(){
-        const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/dlete.wav')
+        const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/dlete' + end)
         file.play();
 }
 
@@ -65,4 +68,14 @@ function sleep(milliseconds) {
     do {
       currentDate = Date.now();
     } while (currentDate - date < milliseconds);
+}
+
+function checker(x){
+    if(x == '~' && change == true){
+        change = !change;
+        end = '1.wav';
+    }else if (x == '~' && change != true){
+        change = !change;
+        end = '.wav';
+    }
 }
