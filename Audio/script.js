@@ -2,7 +2,7 @@ let keys = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 let circle = document.getElementById('center')
 let bgText = "~: "
 
-document.onkeydown = function(e){
+document.onkeypress = function(e){
     var x = e.which || e.keyCode;
     var y = String.fromCharCode(x);
     afPlay(y, x);
@@ -11,11 +11,16 @@ document.onkeydown = function(e){
     bText(x)
 }
 
+document.onkeydown = function(e){
+    var x = e.which || e.keyCode;
+    if(x == 8 || x == 46){
+        afplayDlete(x);
+        anim();
+        bText(x);
+    } 
+}
+
 function afPlay(y, x){
-    if(x == 8 || x == 46) {
-        const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/dlete.wav')
-        file.play();
-    } else {
         if (keys.includes(y.toLowerCase())){
             snd = y.toLowerCase();
         }else{
@@ -23,7 +28,11 @@ function afPlay(y, x){
         }
         const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/'+ snd + '.wav')
         file.play();
-    }
+}
+
+function afplayDlete(x){
+        const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/dlete.wav')
+        file.play();
 }
 
 async function anim(){
@@ -37,7 +46,7 @@ function txtChange(y){
 }
 
 function bText(x){
-    if(x == 8 || x == 46){
+    if(x == 8){
         bgText = bgText.slice(0, -1);
         document.getElementById('boring').innerHTML = bgText;
     } else{
@@ -45,7 +54,7 @@ function bText(x){
         bgText += y;
         document.getElementById('boring').innerHTML = bgText;
     }
-    if(bgText == ''){
+    if(bgText == '' || bgText == '~:' || bgText == '~'){
         bgText = '~: '
     }
 }
