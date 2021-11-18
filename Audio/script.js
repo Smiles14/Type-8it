@@ -11,8 +11,6 @@ document.onkeypress = function(e){
         checker();
         afplayStart();
         anim();
-        bText(x);
-
     }else if (x == 13){
         bgText = "~: ";
         document.getElementById('boring').innerHTML = bgText;
