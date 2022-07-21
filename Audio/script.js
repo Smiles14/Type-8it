@@ -38,17 +38,17 @@ function afPlay(y, x){
         }else{
             snd = keys[Math.floor(Math.random() * keys.length)];
         }
-        const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/'+ snd + end)
+        const file = new Audio('https://secondary-smiles.github.io/Type-8it/Audio/sounds/'+ snd + end)
         file.play();
 }
 
 function afplayDlete(){
-    const file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/dlete' + end)
+    const file = new Audio('https://secondary-smiles.github.io/Type-8it/Audio/sounds/dlete' + end)
     file.play();
 }
 
 function afplayStart(){
-    file = new Audio('https://smiles14.github.io/Type-8it/Audio/sounds/switch.wav');
+    file = new Audio('https://secondary-smiles.github.io/Type-8it/Audio/sounds/switch.wav');
     file.play();
 }
 
